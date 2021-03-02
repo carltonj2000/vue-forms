@@ -19,13 +19,7 @@
       <BaseInput v-model="event.location" label="Location" type="text" />
 
       <h3>Are pets allowed?</h3>
-      <div>
-        <BaseRadio v-model="event.pets" label="Yes" :value="1" name="pets" />
-      </div>
-
-      <div>
-        <BaseRadio v-model="event.pets" label="No" :value="0" name="pets" />
-      </div>
+      <BaseRadioGroup v-model="event.pets" name="pets" :options="petOptions" />
       <pre>{{ JSON.stringify(event) }}</pre>
       <h3>Extras</h3>
       <div>
@@ -41,13 +35,7 @@
 </template>
 
 <script>
-// import BaseInput from '../components/BaseInput'
-// import BaseSelect from '../components/BaseSelect'
 export default {
-  // components: {
-  //   BaseInput,
-  //   BaseSelect
-  // },
   data() {
     return {
       categories: [
@@ -58,6 +46,10 @@ export default {
         'education',
         'food',
         'community'
+      ],
+      petOptions: [
+        { label: 'Yes', value: 1 },
+        { label: 'No', value: 0 }
       ],
       event: {
         category: '',
