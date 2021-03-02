@@ -46,13 +46,13 @@
 </template>
 
 <script>
-import BaseInput from '../components/BaseInput'
-import BaseSelect from '../components/BaseSelect'
+// import BaseInput from '../components/BaseInput'
+// import BaseSelect from '../components/BaseSelect'
 export default {
-  components: {
-    BaseInput,
-    BaseSelect
-  },
+  // components: {
+  //   BaseInput,
+  //   BaseSelect
+  // },
   data() {
     return {
       categories: [

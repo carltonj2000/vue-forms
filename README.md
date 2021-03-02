@@ -1,6 +1,6 @@
 # VUE Forms
 
-The code in pared down form
-[Real World Vue 3](https://www.vuemastery.com/courses/real-world-vue3)
-and
-[this repository]().
+The code in this repository is based on the
+[Vue 3 Forms](https://www.vuemastery.com/courses/vue3-forms)
+course and a started from a pared down version of
+[this repository](https://github.com/carltonj2000/real-world-vue).
