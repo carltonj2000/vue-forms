@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Create an event</h1>
-    <form>
+    <form @submit.prevent="sendForm">
       <BaseSelect
         v-model="event.category"
         label="Select a category"
@@ -35,6 +35,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data() {
     return {
@@ -62,6 +64,11 @@ export default {
           music: false
         }
       }
+    }
+  },
+  methods: {
+    sendForm() {
+      console.log(this.event)
     }
   }
 }
