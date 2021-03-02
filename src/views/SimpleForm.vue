@@ -69,6 +69,13 @@ export default {
   methods: {
     sendForm() {
       console.log(this.event)
+      axios
+        .post(
+          'http://my-json-server.typicode.com/carltonj2000/vue-forms/events',
+          this.event
+        )
+        .then(resp => console.log({ resp }))
+        .catch(e => console.log({ e }))
     }
   }
 }
